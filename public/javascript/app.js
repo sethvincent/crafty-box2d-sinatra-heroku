@@ -4,17 +4,17 @@
 
     this.get('/', function() {
       var compiled = _.template("hello: <%= name %>");
-      $('#main').text(compiled({name : 'moe'}));
+      this.swap(compiled({name : 'moe'}));
     });
     
     this.get('#/huh', function(ctx) {
       var huh = _.template("hello: <%= name %>");
-      $('#main').text(huh({name : 'bob'}));
+      this.swap(huh({name : 'bob'}));
     });
     
     this.get('#/oh', function(ctx) {
       var oh = _.template(test);
-      $('#main').append(oh({name : 'poop'}));
+      this.swap(oh({name : 'poop'}));
     });
 
   });
