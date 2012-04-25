@@ -8,13 +8,13 @@
     });
     
     this.get('#/huh', function(ctx) {
-      var compiled = _.template("hello: <%= name %>");
-      $('#main').text(compiled({name : 'bob'}));
+      var huh = _.template("hello: <%= name %>");
+      $('#main').text(huh({name : 'bob'}));
     });
     
     this.get('#/oh', function(ctx) {
-      var compiled = _.template("hello: <%= name %>");
-      $('#main').text(compiled({name : 'poop'}));
+      var oh = _.template(test);
+      $('#main').append(oh({name : 'poop'}));
     });
 
   });
