@@ -2,7 +2,7 @@ window.onload = function () {
     gameInit();
 };
 
-gameInit = function(){
+var gameInit = function(){
   Crafty.init(720, 480);
   Crafty.canvas.init();
   Crafty.box2D.init(0, 10, 32, true);
@@ -19,6 +19,6 @@ gameInit = function(){
       .color("#FF0000")
       .box2d({
         bodyType: 'dynamic'
-      })
+      });
   
-}
+};
